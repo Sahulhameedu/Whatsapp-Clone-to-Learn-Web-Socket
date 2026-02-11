@@ -12,7 +12,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Chat App',
-      theme: ThemeData(fontFamily: 'OpenSans', primaryColor: Color(0xff075e54)),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        fontFamily: 'OpenSans',
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xff075e54),
+          primary: const Color(0xff075e54),
+          secondary: const Color(0xFF128C7E),
+        ),
+      ),
       home: const HomeScreen(),
     );
   }
